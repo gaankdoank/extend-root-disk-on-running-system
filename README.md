@@ -3,16 +3,15 @@ Extend Root partition LVM space on running system
 
 Type _lsblk_ and see where your partition attached on same disk or not. If you have at least 1 partition not used on same disk go following to number 1 step.
 And if you adding physichal disk, run this :
-_fdisk /dev/sdb_
-See the screenshot for the options you should pick
-_n_ (new partition)
-_p_ (primary)
+a. _fdisk /dev/sdb_
+b. _n_ (new partition)
+c. _p_ (primary)
 (Press ENTER) (Use default partition number)
 (Press ENTER) (Use default first sector)
 (Press ENTER) (Use default last sector)
-_t_ (change the partition type)
-_8e_ (Linux LVM)
-_w_ (write) 
+d. _t_ (change the partition type)
+e. _8e_ (Linux LVM)
+f. _w_ (write) 
 Continue to number 1 step.
 
 1. Create new partition (ex: /dev/sda3) from unallocated space. I am  use “cfdisk” and type LVM / 8E <br>
